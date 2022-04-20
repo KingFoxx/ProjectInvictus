@@ -12,10 +12,10 @@ public interface CryptoRepo extends JpaRepository<Crypto, Integer> {
 	
 	List<Crypto> findByNameIgnoreCase(String name);
 	
-	List<Crypto> findByABV(String abbreviation);
+	List<Crypto> findByAbbreviationIgnoreCase(String abbreviation);
 	
-	List<Crypto> findByAMTCryp(Integer amountCryp);
+	List<Crypto> findByAmountCryp(Double amountCryp);
 	
-	List<Crypto> findByCost(Integer cost);
+	List<Crypto> findByCost(Double cost);
 
 }

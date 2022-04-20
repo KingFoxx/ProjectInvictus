@@ -68,20 +68,20 @@ public class CryptoController {
 		return ResponseEntity.ok(found);
 	}
 
-	@GetMapping("/getByAge/{abbreviation}")
-	public ResponseEntity<List<Crypto>> getCryptoByABV(@PathVariable String abbreviation) {
-		List<Crypto> found = this.service.getCryptoByABV(abbreviation);
+	@GetMapping("/getByAbbreviation/{abbreviation}")
+	public ResponseEntity<List<Crypto>> getCryptoByAbbreviation(@PathVariable String abbreviation) {
+		List<Crypto> found = this.service.getCryptoByAbbreviation(abbreviation);
 		return ResponseEntity.ok(found);
 	}
 
-	@GetMapping("/getByBreed/{amountCryp}")
-	public ResponseEntity<List<Crypto>> getCryptoByAMTCryp(@PathVariable Integer amountCryp) {
-		List<Crypto> found = this.service.getCryptoByAMTCryp(amountCryp);
+	@GetMapping("/getByAMT/{amountCryp}")
+	public ResponseEntity<List<Crypto>> getCryptoByAmountCryp(@PathVariable Double amountCryp) {
+		List<Crypto> found = this.service.getCryptoByAmountCryp(amountCryp);
 		return ResponseEntity.ok(found);
 	}
 	
-	@GetMapping("/getByBreed/{cost}")
-	public ResponseEntity<List<Crypto>> getCryptoByCost(@PathVariable Integer cost) {
+	@GetMapping("/getByCost/{cost}")
+	public ResponseEntity<List<Crypto>> getCryptoByCost(@PathVariable Double cost) {
 		List<Crypto> found = this.service.getCryptoByCost(cost);
 		return ResponseEntity.ok(found);
 	}

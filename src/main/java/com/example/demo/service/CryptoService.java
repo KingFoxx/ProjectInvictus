@@ -49,15 +49,15 @@ public class CryptoService implements ServiceIF<Crypto> {
 		List<Crypto> found = this.repo.findByNameIgnoreCase(name);
 		return found;
 	}
-	public List<Crypto> getCryptoByABV(String abbreviation) {
-		List<Crypto> found = this.repo.findByABV(abbreviation);
+	public List<Crypto> getCryptoByAbbreviation(String abbreviation) {
+		List<Crypto> found = this.repo.findByAbbreviationIgnoreCase(abbreviation);
 		return found;
 	}
-	public List<Crypto> getCryptoByAMTCryp(Integer amountCryp) {
-		List<Crypto> found = this.repo.findByAMTCryp(amountCryp);
+	public List<Crypto> getCryptoByAmountCryp(Double amountCryp) {
+		List<Crypto> found = this.repo.findByAmountCryp(amountCryp);
 		return found;
 	}
-	public List<Crypto> getCryptoByCost(Integer cost) {
+	public List<Crypto> getCryptoByCost(Double cost) {
 		List<Crypto> found = this.repo.findByCost(cost);
 		return found;
 	}
