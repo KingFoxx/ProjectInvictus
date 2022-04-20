@@ -14,7 +14,7 @@ public interface CryptoRepo extends JpaRepository<Crypto, Integer> {
 	
 	List<Crypto> findByABV(String abbreviation);
 	
-	List<Crypto> findByAMTCryp(String amountCryp);
+	List<Crypto> findByAMTCryp(Integer amountCryp);
 	
 	List<Crypto> findByCost(Integer cost);
 

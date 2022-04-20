@@ -53,7 +53,7 @@ public class CryptoService implements ServiceIF<Crypto> {
 		List<Crypto> found = this.repo.findByABV(abbreviation);
 		return found;
 	}
-	public List<Crypto> getCryptoByAMTCryp(String amountCryp) {
+	public List<Crypto> getCryptoByAMTCryp(Integer amountCryp) {
 		List<Crypto> found = this.repo.findByAMTCryp(amountCryp);
 		return found;
 	}
