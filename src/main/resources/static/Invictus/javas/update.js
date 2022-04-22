@@ -1,6 +1,6 @@
 `use strict`
 
-import * as DOM from '../dom.js';
+import * as DOM from '../script.js';
 
 const writeItem = item => {
     const child = document.createElement(`li`);
