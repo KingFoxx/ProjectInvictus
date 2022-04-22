@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+  <title>Create</title>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        Invictus
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="index.html">MainPage</a>
+      <a href="adding.html" >Create</a>
+      <a href="update.html" >Update</a>
+      <a href="delete.html" >Delete</a>
+      <a href="getall.html" >ViewAll</a>
+      <a href="id.html" >ViewById</a>
+      <a href="name.html" >ViewByName</a>
+      <a href="abbreviation.html" >ViewByAbv</a>
+      <a href="amt.html" >ViewByAmountCryp</a>
+      <a href="cost.html" >ViewByCost</a>
+    </div>
+  </div>
+  <div class="total">
+    <form>
+      <h2>Create</h2>
+      <input type="text" id="inputName" class="form-control" placeholder="Crypto Name" />
+      <input type="text" id="inputAbbriviation" class="form-control" placeholder="Abbreviation" />
+      <input type="number" id="inputAmountCryp" class="form-control" placeholder="How much crypto" />
+      <input type="number" id="inputCost" class="form-control" placeholder="How much did it cost £"/>
+      <button type="button" class="btn btn-primary mt-2" id="buttonCreate">Create</button>
+    </form>
+  </div>
+  <div class="bob2">
+    <form>
+      <ul id="listOutput"></ul>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./adding.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
