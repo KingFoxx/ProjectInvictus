@@ -19,17 +19,17 @@ import javax.persistence.Id;
 		private String abbreviation;
 		
 		@Column(nullable = false)
-		private Integer amountCryp;
+		private Double amountCryp;
 		
 		@Column(nullable = false)
-		private Integer cost;
+		private Double cost;
 
 		public Crypto() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-		public Crypto(Integer id, String name, String abbreviation, Integer amountCryp, Integer cost) {
+		public Crypto(Integer id, String name, String abbreviation, Double amountCryp, Double cost) {
 			super();
 			this.id = id;
 			this.name = name;
@@ -62,19 +62,19 @@ import javax.persistence.Id;
 			this.abbreviation = abbreviation;
 		}
 
-		public Integer getAmountCryp() {
+		public Double getAmountCryp() {
 			return amountCryp;
 		}
 
-		public void setAmountCryp(Integer amountCryp) {
+		public void setAmountCryp(Double amountCryp) {
 			this.amountCryp = amountCryp;
 		}
 
-		public Integer getCost() {
+		public Double getCost() {
 			return cost;
 		}
 
-		public void setCost(Integer cost) {
+		public void setCost(Double cost) {
 			this.cost = cost;
 		}
 
