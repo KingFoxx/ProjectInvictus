@@ -1,6 +1,6 @@
 `use strict`
 
-import * as DOM from '../script.js';
+import * as DOM from './script.js';
 
 const writeItem = item => {
   const child = document.createElement(`li`);
@@ -8,10 +8,10 @@ const writeItem = item => {
   child.innerHTML = `<b>ID: ${item.id}</b> <br> Name: ${item.name}<br> Abbreviation: ${item.abbreviation}<br> AmountCryp: ${item.amountCryp} <br> Cost: ${item.cost} <br><br>`;
   DOM.listOutput.appendChild(child);
 }
-const getNew = (id) => {
-  DOM.listOutput.innerHTML = ``;
+const getAbbreviation = () => {
+  DOM.abbreviationOutput.innerHTML = ``;
 
-  axios.get(`http://localhost:8080/get/{id}`)
+  axios.get(`http://localhost:8080/getByAbbreviation/{abbreviation}`)
     .then((response) => {
       if (!Array.isArray(response.data)) {
         writeItem(response.data);
@@ -24,4 +24,4 @@ const getNew = (id) => {
       console.log(err);
     });
 }
-DOM.buttonRead.onclick = () => getNew(DOM.inputId.value);
+DOM.buttonAbbreviation.onclick = () => getAbbreviation(DOM.inputFindAbbreviation.value);
