@@ -152,4 +152,11 @@ public class CryptoControllerIntegrationTest {
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
 
+
+	@Test
+	void toStringTest() throws Exception {
+		Crypto crypto = new Crypto(1, "BitCoin", "BTC", 3.1, 15000.34);
+		crypto.toString();
+
+}
 }

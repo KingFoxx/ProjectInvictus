@@ -1,20 +1,17 @@
 `use strict`
 
-import * as DOM from '../script.js';
+import * as DOM from './script.js';
 
 const writeItem = item => {
   const child = document.createElement(`li`);
   child.id = item._id;
-  child.innerHTML = `${JSON.stringify(item)}`;
+  child.innerHTML = `<b>ID: ${item.id}</b> <br> Name: ${item.name}<br> Abbreviation: ${item.abbreviation}<br> AmountCryp: ${item.amountCryp} <br> Cost: ${item.cost} <br><br>`;
   DOM.listOutput.appendChild(child);
 }
-const post = () => {
-  axios.post(`http://localhost:8080/create`, {
-    name: DOM.inputName.value,
-    abbreviation: DOM.inputAbbreviation.value,
-    amountCryp: DOM.inputAmountCryp.value,
-    cost: DOM.inputCost.value
-  })
+const get = () => {
+  DOM.listOutput.innerHTML = ``;
+
+  axios.get(`http://localhost:8080/getAll`)
     .then((response) => {
       if (!Array.isArray(response.data)) {
         writeItem(response.data);
@@ -27,4 +24,4 @@ const post = () => {
       console.log(err);
     });
 }
-DOM.buttonCreate.onclick = () => post();
+DOM.buttonReadAll.onclick = () => get();
