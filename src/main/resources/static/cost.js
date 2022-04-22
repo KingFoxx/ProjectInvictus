@@ -1,6 +1,6 @@
 `use strict`
 
-import * as DOM from '../script.js';
+import * as DOM from './script.js';
 
 const writeItem = item => {
   const child = document.createElement(`li`);
@@ -11,7 +11,7 @@ const writeItem = item => {
 const getCost = () => {
   DOM.costOutput.innerHTML = ``;
 
-  axios.get(`http://localhost:8080/getByCost/{cost}`)
+  axios.get(`http://localhost:8080/getByCost/${cost}`)
     .then((response) => {
       if (!Array.isArray(response.data)) {
         writeItem(response.data);
