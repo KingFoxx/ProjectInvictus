@@ -29,7 +29,7 @@ public class CryptoController {
 	}
 
 	// 201 - Created
-	@PostMapping("/Create")
+	@PostMapping("/create")
 	public ResponseEntity<Crypto> createCrypto(@RequestBody Crypto c) {
 		Crypto created = this.service.create(c);
 		ResponseEntity<Crypto> response = new ResponseEntity<Crypto>(created, HttpStatus.CREATED);
