@@ -42,7 +42,7 @@ public class CryptoControllerIntegrationTest {
 	void testCreate() throws Exception {
 		Crypto testCrypto = new Crypto(null, "BitCoin", "BTC", 3.1, 15000.34);
 		String testCryptoAsJSON = this.mapper.writeValueAsString(testCrypto);
-		RequestBuilder req = post("/Create").contentType(MediaType.APPLICATION_JSON).content(testCryptoAsJSON);
+		RequestBuilder req = post("/create").contentType(MediaType.APPLICATION_JSON).content(testCryptoAsJSON);
 
 		Crypto testCreatedCrypto = new Crypto(4, "BitCoin", "BTC", 3.1, 15000.34);
 		String testCreatedCryptoAsJSON = this.mapper.writeValueAsString(testCreatedCrypto);
