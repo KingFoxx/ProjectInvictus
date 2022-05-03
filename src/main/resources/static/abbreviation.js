@@ -11,7 +11,7 @@ const writeItem = item => {
 const getAbbreviation = () => {
   DOM.abbreviationOutput.innerHTML = ``;
 
-  axios.get(`http://localhost:8080/getByAbbreviation/{abbreviation}`)
+  axios.get(`http://localhost:8080/getByAbbreviation/${abbreviation}`)
     .then((response) => {
       if (!Array.isArray(response.data)) {
         writeItem(response.data);
