@@ -9,6 +9,7 @@ const writeItem = item => {
     DOM.listOutput.appendChild(child);
 }
 const put = (id) => {
+	console.log("Hello")
     axios.put(`http://localhost:8080/replace/${id}`, {
         id: DOM.inputUpdateId.value,
         name: DOM.inputUpdateName.value,

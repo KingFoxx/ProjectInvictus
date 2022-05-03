@@ -9,6 +9,7 @@ const writeItem = item => {
   DOM.listOutput.appendChild(child);
 }
 const post = () => {
+	console.log("Hello");
   axios.post(`http://localhost:8080/create`, {
     name: DOM.inputName.value,
     abbreviation: DOM.inputAbbreviation.value,
@@ -27,4 +28,5 @@ const post = () => {
       console.log(err);
     });
 }
+
 DOM.buttonCreate.onclick = () => post();
